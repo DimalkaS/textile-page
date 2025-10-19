@@ -60,6 +60,22 @@
             margin: 1rem 0;
             border-radius: 9999px;
         }
+        /* Custom CSS for Group Photo Display (Ensures whole image is visible) */
+        .group-photo-container {
+            width: 100%;
+            /* Uses a wide aspect ratio for a banner-like container */
+            aspect-ratio: 3 / 2; 
+            margin: 0 auto;
+            position: relative; /* Needed for img child sizing */
+        }
+        .group-photo-img {
+            /* Fill the container */
+            width: 100%;
+            height: 100%;
+            display: block;
+            /* CRITICAL: Ensures the entire image is shown, even if it leaves empty space (letterboxing) */
+            object-fit: contain; 
+        }
     </style>
 </head>
 
@@ -116,7 +132,7 @@
             <div class="text-center bg-gradient-to-br from-primary-blue to-blue-900 p-8 sm:p-16 rounded-3xl shadow-2xl text-white mb-12">
                 <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 animate-fade-in-down">Engineering Tomorrow's Textiles</h1>
                 <p class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto opacity-90">
-                    We are **Four Undergraduate Engineers** from University of Moratuwa, dedicated to driving innovation in  Apparel Manufacturing  and Sustainable Textile Technology.
+                    We are **Four Undergraduate Engineers** from UoM, dedicated to driving innovation in material science, apparel manufacturing, and sustainable textile technology.
                 </p>
                 <div class="space-y-4 sm:space-y-0 sm:space-x-6">
                     <button onclick="showSection('projects')" class="bg-accent-orange text-dark-bg font-bold px-8 py-3 rounded-xl shadow-lg hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
@@ -148,14 +164,17 @@
                 </div>
             </div>
 
-            <!-- Group Photo Section: PATH CORRECTED TO ROOT -->
+            <!-- Group Photo Section: PATH CORRECTED TO ROOT & CONTAINER ADDED -->
             <div class="mt-12 text-center">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team, In Focus</h2>
-                <!-- PATH FIXED: Now points to the root directory -->
-                <img src="images/group_photo.png" 
-                     onerror="this.src='https://placehold.co/1200x400/1e40af/FFFFFF?text=Group+Photo+Placeholder'"
-                     class="w-full rounded-xl shadow-2xl border-4 border-accent-orange object-cover h-64 mx-auto" 
-                     alt="Group Photo of Textile Engineering Undergraduates">
+                
+                <div class="group-photo-container rounded-xl shadow-2xl border-4 border-accent-orange mx-auto">
+                    <img src="group_photo.jpg" 
+                         onerror="this.src='https://placehold.co/1200x800/1e40af/FFFFFF?text=Group+Photo+Placeholder'"
+                         class="group-photo-img" 
+                         alt="Group Photo of Textile Engineering Undergraduates">
+                </div>
+                
                 <p class="text-sm text-gray-500 mt-2">Ensure 'group_photo.jpg' is uploaded directly to the root of your repository (next to index.html).</p>
             </div>
             
@@ -430,7 +449,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white mt-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm">
-            &copy; 2025 University of Moratuwa T&A Group. | Created by Dimalka Hettiarachchi.
+            &copy; 2025 University of Moratuwa T&A Group. | Created with Tailwind CSS.
         </div>
     </footer>
 
