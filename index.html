@@ -60,22 +60,7 @@
             margin: 1rem 0;
             border-radius: 9999px;
         }
-        /* Custom CSS for Group Photo Display (Ensures whole image is visible) */
-        .group-photo-container {
-            width: 100%;
-            /* Uses a wide aspect ratio for a banner-like container */
-            aspect-ratio: 3 / 2; 
-            margin: 0 auto;
-            position: relative; /* Needed for img child sizing */
-        }
-        .group-photo-img {
-            /* Fill the container */
-            width: 100%;
-            height: 100%;
-            display: block;
-            /* CRITICAL: Ensures the entire image is shown, even if it leaves empty space (letterboxing) */
-            object-fit: contain; 
-        }
+        /* Removed group-photo-container and group-photo-img custom CSS */
     </style>
 </head>
 
@@ -164,18 +149,12 @@
                 </div>
             </div>
 
-            <!-- Group Photo Section: PATH CORRECTED TO ROOT & CONTAINER ADDED -->
+            <!-- Group Photo Section: REMOVED -->
             <div class="mt-12 text-center">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team, In Focus</h2>
                 
-                <div class="group-photo-container rounded-xl shadow-2xl border-4 border-accent-orange mx-auto">
-                    <img src="group_photo.jpg" 
-                         onerror="this.src='https://placehold.co/1200x800/1e40af/FFFFFF?text=Group+Photo+Placeholder'"
-                         class="group-photo-img" 
-                         alt="Group Photo of Textile Engineering Undergraduates">
-                </div>
+                <!-- ALL Group Photo code removed here -->
                 
-                <p class="text-sm text-gray-500 mt-2">Ensure 'group_photo.jpg' is uploaded directly to the root of your repository (next to index.html).</p>
             </div>
             
             <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6 border-b-2 border-primary-blue pb-2">Our Collective Vision</h2>
@@ -199,8 +178,8 @@
                          alt="Dimalka Hettiarachchi Profile">
                     <h2 class="text-2xl font-bold text-gray-800 text-center">Dimalka Hettiarachchi</h2>
                     <p class="text-primary-blue text-center font-semibold mb-2 text-sm">Index: 241083D</p>
-                    <p class="text-primary-blue text-center font-semibold mb-3">Technical Textiles & R&D</p>
-                    <p class="text-gray-600 text-center text-sm">IT Specialist, Graphic Designer, Video Editor, Web Development, UI/UX Design, Social Media Management.</p>
+                    <p class="text-primary-blue text-center font-semibold mb-3">IT Specialist</p>
+                    <p class="text-gray-600 text-center text-sm">Graphic Designer, Video Editor, Web Development, UI/UX Design, Social Media Management,Fabric Enthusiast.</p>
                     <a href="https://www.linkedin.com/in/dimalka-hettiarachchi-31844435b/" target="_blank" class="block mt-4 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View LinkedIn »</a>
                     <a href="#" onclick="showSection('portfolios'); highlightPortfolio('dh')" class="block mt-1 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View Portfolio »</a>
                 </div>
@@ -214,8 +193,8 @@
                          alt="Tuan Pallie Profile">
                     <h2 class="text-2xl font-bold text-gray-800 text-center">Tuan Pallie</h2>
                     <p class="text-primary-blue text-center font-semibold mb-2 text-sm">Index: 241051E</p>
-                    <p class="text-primary-blue text-center font-semibold mb-3">Apparel Manufacturing & QC</p>
-                    <p class="text-gray-600 text-center text-sm">Chess master, chess coach, entrepreneur, fabric enthusiast, strategic planning, business development.</p>
+                    <p class="text-primary-blue text-center font-semibold mb-3">Business Analizer</p>
+                    <p class="text-gray-600 text-center text-sm">Chess Master, Chess Coach, Entrepreneur, Fabric Enthusiast, Strategic Planning, Business Development.</p>
                     <a href="https://www.linkedin.com/in/tuan-ehshan-pallie-1729a017b/" target="_blank" class="block mt-4 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View LinkedIn »</a>
                     <a href="#" onclick="showSection('portfolios'); highlightPortfolio('tp')" class="block mt-1 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View Portfolio »</a>
                 </div>
@@ -229,8 +208,8 @@
                          alt="Udula Bimsara Profile">
                     <h2 class="text-2xl font-bold text-gray-800 text-center">Udula Bimsara</h2>
                     <p class="text-primary-blue text-center font-semibold mb-2 text-sm">Index: 241041A</p>
-                    <p class="text-primary-blue text-center font-semibold mb-3">Textile Chemistry & Dyeing</p>
-                    <p class="text-gray-600 text-center text-sm">Creative minded person, graphic designer, video editor, professional dancer, fabric enthusiast.</p>
+                    <p class="text-primary-blue text-center font-semibold mb-3">Planner</p>
+                    <p class="text-gray-600 text-center text-sm">Creative minded person, Graphic Designer, Video Editor, Professional Dancer, Fabric Enthusiast</p>
                     <a href="https://www.linkedin.com/in/udula-bimsara-95a484389/" target="_blank" class="block mt-4 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View LinkedIn »</a>
                     <a href="#" onclick="showSection('portfolios'); highlightPortfolio('ub')" class="block mt-1 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View Portfolio »</a>
                 </div>
@@ -244,8 +223,8 @@
                          alt="Sulan Gunawardena Profile">
                     <h2 class="text-2xl font-bold text-gray-800 text-center">Sulan Gunawardena</h2>
                     <p class="text-primary-blue text-center font-semibold mb-2 text-sm">Index: 241085K</p>
-                    <p class="text-primary-blue text-center font-semibold mb-3">CAD, Pattern Making & Fit</p>
-                    <p class="text-gray-600 text-center text-sm">Problem solver, data analyzer, fabric enthusiast, research and analysis, critical thinker.</p>
+                    <p class="text-primary-blue text-center font-semibold mb-3">Data Analyzer</p>
+                    <p class="text-gray-600 text-center text-sm">Problem Solver, Fabric Enthusiast, Critical Thinker, Strategic Thinker.</p>
                     <a href="https://www.linkedin.com/in/sulan-gunawardena-485584389/" target="_blank" class="block mt-4 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View LinkedIn »</a>
                     <a href="#" onclick="showSection('portfolios'); highlightPortfolio('sg')" class="block mt-1 text-center text-sm text-primary-blue hover:text-accent-orange font-medium transition duration-150">View Portfolio »</a>
                 </div>
